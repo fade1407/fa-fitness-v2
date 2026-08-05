@@ -1,5 +1,5 @@
 /**
- * Keeps the launch mode explicit and easy to reverse without changing routes.
- * Set NEXT_PUBLIC_AUTH_REQUIRED=true when the login gate should be restored.
+ * Anonymous accounts keep each device's data private without requiring a password.
+ * Set NEXT_PUBLIC_AUTH_REQUIRED=false only for a public, read-only preview.
  */
-export const authenticationRequired = process.env.NEXT_PUBLIC_AUTH_REQUIRED === "true";
+export const authenticationRequired = process.env.NEXT_PUBLIC_AUTH_REQUIRED !== "false";
